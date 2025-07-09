@@ -5,13 +5,13 @@ import requests
 import gzip
 import json
 
-getWebsite = requests.get(" https://msmarco.z22.web.core.windows.net/msmarco/dev_v2.1.json.gz")
+getMSMARCO = requests.get("https://msmarco.z22.web.core.windows.net/msmarco/dev_v2.1.json.gz")
 
-json_data = gzip.decompress(getWebsite.content)
+jsonData = gzip.decompress(getMSMARCO.content)
 
-newFormat = json.loads(json_data)
+jsonFormat = json.loads(jsonData)
 
-print(data)
+print(jsonFormat)
 
 
 
